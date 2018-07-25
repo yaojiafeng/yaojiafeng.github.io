@@ -1,0 +1,183 @@
+.resume_box{ 
+    position: relative; 
+    margin:20px auto;
+    width: 1060px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .4);
+    -webkit-box-shadow:0 2px 2px 0 rgba(0, 0, 0, .4);
+    -moz-box-shadow:0 2px 2px 0 rgba(0, 0, 0, .4);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    overflow: hidden;
+}
+
+/*左边部分*/
+.left_area{
+    background: #e8e8e8;
+    width: 343px;
+}
+.img_h{
+    text-align: center;
+}
+.img_h img{
+    height: 150px;
+    border-radius:50%;
+    overflow: hidden;
+    margin-top: 61px;
+    border: rgb(79, 25, 179) solid 1px;
+    margin-bottom: 10px;
+}
+.basic_info{
+    margin-top: 30px;
+}
+.basic_info li{
+    padding-left: 70px;
+    padding-top: 5px;
+   
+}
+.basic_info li span{
+    vertical-align: top;
+    font-size: 14px;
+}
+.birth-icon{
+    background: url("../images/icon/sprite.png")-20px -0px no-repeat;
+}
+.address-icon{
+    background: url("../images/icon/sprite.png")-0px -0px no-repeat;
+}
+.phone-icon{
+    background: url("../images/icon/sprite.png")-100px -0px no-repeat;
+}
+.email-icon{
+    background: url("../images/icon/sprite.png")-60px -0px no-repeat;
+}
+.github-icon{
+    background: url("../images/icon/sprite.png")-80px -0px no-repeat;
+}
+.site-icon{
+    background: url("../images/icon/sprite.png")-140px -0px no-repeat;
+}
+i{  
+    height: 20px;
+    width: 20px;
+    display: inline-block;
+    overflow: hidden;
+}
+.job_intention{
+    margin-top: 30px;
+
+}
+.personal_info{
+    margin-top: 30px;
+}
+.xxx{
+    margin-top: 30px;
+}
+/*掌握技能*/
+.skill{
+ margin-top: 50px;
+ 
+}
+.skill-icon{
+    background: url("../images/icon/sprite.png")-160px -0px no-repeat;
+}
+.skill h2{
+    width: 150px;
+    margin-left: 25%;
+    text-align: center;
+}
+.skill ul{
+    margin: 40px auto;
+    width: 300px;
+    padding-left: 30px;
+}
+.skill .skills-list li{
+    background:#4986b4;
+    height: 20px;
+    border-radius: 2%;
+    margin-top: 20px;
+    font-family:"Times New Roman",Georgia,Serif;
+    font-size: 16px;
+    color: #fff;
+    padding-left: 25%;
+    position: relative;
+}
+.skill ul .c1{
+    width: 100px; 
+}
+.skill ul .c2{
+    width: 80px; 
+}
+.skill ul .c3{
+    width: 80px; 
+}
+.skill ul .c4{
+    width: 75px; 
+}
+.skill ul .c5{
+    width: 75px; 
+}
+.skill ul .c6{
+    width: 40px; 
+}
+.skill ul li span{
+    position: absolute;
+    left: 191px;
+    color: black;  
+}
+.skills-des li{
+    list-style-type:square ;
+    height: 20px;
+    border-radius: 2%;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+/*右边部分*/
+dl{
+   margin-top: 30px
+}
+dt{
+    margin-left: 30px; 
+}
+.edu-icon{
+    background: url("../images/icon/sprite.png")-40px -0px no-repeat;
+}
+.project-icon{
+    background: url("../images/icon/sprite.png")-120px -0px no-repeat;
+}
+dt h2{
+    display: inline-block;
+    font-size: 20px;
+    margin-left: 10px;
+    padding-bottom: 10px;
+    width:620px;
+    border-bottom:1px solid #ccc; 
+
+}
+dd{
+    font-size: 17px;
+    margin-left: 60px;
+    margin-top: 20px
+}
+dd p{
+    margin: 5px 0;
+}
+.aside-nav{
+    position: fixed;
+    right: 0;
+    top: 40%;
+}
+.aside-nav ul li{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 15px;
+    background: #ccc;
+    color: #fff;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}

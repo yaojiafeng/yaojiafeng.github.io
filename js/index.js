@@ -2,31 +2,11 @@ var vm = new Vue({
     el: "#dynamicText",
     data: {
         list: [],
-        text: ['如果有一天,我突然出现在你眼前,叫一声你的名字,你会感动吗?',
-            `菜鸡互啄,嘻嘻!`,
-            `我们公司都不用es5了,用es6789...`,
-            `凭我爱你,这么久,亦没信心走出教堂,没理由,为何未够好,请听我预告,就算跟你未游尽花都,可给你的都会做到,并未求什么,唯一志愿想你安好!`,
-            `浅谈一下xss攻击原理和防范?`,
-            `我们要的是Full Stack Development Engineer`,
-            `vue的实现原理?`,
-            `typeScript/javaScript/ecmaScript之间有啥逗比关系?`,
-            `不要在问了好吗,ok?`,
-            `再问我就放弃`,
-            `es2017的修饰器有了解吗?`,
-            `node.js是什么?`,
-            `Promise和Observable`,
-            `把ng2+使用的很溜但完全不知道ts是什么?`,
-            `我大概未算学懂保护别人`,
-            `凭什么让我相信你喜欢写js?`,
-            `到处都是dom操作,非常好性能,卡比哈哈`,
-            `大家都喜欢讨论解决方案,你呢?`,
-            `2026年我想和你一起去美国看世界杯,可以吗?`,
-            `有很多功能想做,但时间和经验优先,需要慢慢积累。`
+        text: ['如果有一天...'
         ]
     },
     methods: {
         show: function () {
-            // this.text[0]='放弃了'
             let i = 0;
             let j = selectFrom(0, this.text.length - 1);
             let timer = setInterval(function () {
@@ -277,7 +257,7 @@ EventUtil.addHandlder(startBallBtn, 'click', function () {
     exitBallBtn.style.display = "block";
     getStartGameBox();
     createBall(50);
-    createBlock('前端吧');
+    createBlock('放弃了');
 })
 EventUtil.addHandlder(ballBox, 'click', function (event) {
     // launchBall(100, event);
