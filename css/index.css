@@ -1,0 +1,266 @@
+.header {
+    width: 100%;
+    height: 113px;
+    background: #000;
+    color: #ffffff;
+    line-height: 113px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 3);
+    -moz-box-shadow: 0 5px 20px rgba(0, 0, 0, 3);
+    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, 3);
+    -o-box-shadow: 0 5px 20px rgba(0, 0, 0, 3);
+  }
+  
+  .ui_logo {
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .ui_logo a span {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 40px;
+    color: #fff
+  }
+  
+  .nav_box {
+    float: right;
+    vertical-align: top;
+  }
+  
+  .nav_icon {
+    display: none
+  }
+  
+  .nav_menu,
+  .nav_social {
+    float: left;
+    margin-left: 10px;
+  }
+  
+  .nav_box li {
+    float: left;
+    margin: 0 10px;
+  }
+  
+  .nav_social li {
+    margin: 0 8px;
+  }
+  
+  .active {
+    color: #eb7532;
+  }
+  
+  .nav_box li a:hover {
+    color: #eb7532;
+  }
+  
+  span.icon_menu {
+    display: inline-block;
+    width: 35px;
+    height: 27px;
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+    vertical-align: middle
+  }
+  
+  span.icon_menu>span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 4px;
+    margin-top: -3px;
+    background: #fff;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  
+  span.icon_menu>span:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    top: -11px;
+  }
+  
+  span.icon_menu>span:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    top: 11px
+  }
+  
+  /*内容部分*/
+  
+  .index_content {
+    position: relative;
+    width: 100%;
+    top: 113px;
+    height: auto;
+  }
+  
+  /*弹球*/
+  
+  #dynamicText {
+    height: 596px;
+    background: black;
+    z-index: 2;
+    border-top: #fff 1px solid
+  }
+  #text-box{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+  }
+  #dynamicText span{
+    font-size: 30px;
+    color: #FFF;
+  }
+  #dynamicText span:first-child{
+    margin-left: 60px;
+    display: inline-block;
+  }
+  #audio-playbtn,
+  #startBallBtn,
+  #exitBallBtn {
+    position: fixed;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    height: 30px;
+    z-index: 10;
+    border-radius: 5px;
+    opacity: 0.3;
+    transition: opacity 100ms linear;
+  }
+  #audio-playbtn {
+    top: 40%;
+    left: -58px;
+    transition: left 100ms linear;
+  }
+  #startBallBtn {
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: -46px;
+    transition: left 100ms linear;
+  }
+  
+  #exitBallBtn {
+    top: 20px;
+    right: -38px;
+    transition: right 100ms linear;
+  }
+  #audio-playbtn:hover {
+    left: 0;
+    opacity: 1
+  }
+  #startBallBtn:hover {
+    left: 0;
+    opacity: 1
+  }
+  
+  #exitBallBtn:hover {
+    right: 0;
+    opacity: 1
+  }
+  
+  /*sidebar*/
+  
+  #sidebar {
+    display: none
+  }
+  
+  @media (max-width:960px) {
+    .header {
+      height: 60px;
+      line-height: 60px
+    }
+    .index_content {
+      top: 60px
+    }
+    #dynamicText {
+      height: 596px;
+      z-index: 2;
+    }
+    .nav_box {
+      display: none
+    }
+    .nav_icon {
+      display: block
+    }
+    #sidebar {
+      display: block
+    }
+  }
+  
+  /*sidebar nav*/
+  
+  .sidebar_menu {
+    height: 700px;
+  }
+  
+  .sidebar_menu li {
+    height: 40px;
+    line-height: 40px;
+    padding: 10px;
+    border-bottom: 1px dotted #383838;
+  }
+  
+  .sidebar_menu li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500
+  }
+  
+  footer {
+    position: relative;
+    height: 96px;
+    width: 100%;
+    background: #ccc;
+  }
+  
+  .ppp {
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -25px;
+    text-align: center
+  }
