@@ -107,7 +107,7 @@ EventUtil.addHandlder(playBtn,'click', function (e) {
 function getPlayTime(){
      return myVideo.currentTime;
 }
-
+setTimeout(vm.show(),20000)
 /*
 弹球部分
 */
