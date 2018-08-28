@@ -103,7 +103,7 @@ EventUtil.addHandlder(playBtn,'click', function (e) {
             myVideo.pause();
         }
 })
-getPlayTime(){
+function getPlayTime(){
      return myVideo.currentTime;
 }
 if(getPlayTime()>=20){
