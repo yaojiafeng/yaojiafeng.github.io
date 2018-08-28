@@ -2,7 +2,7 @@ var vm = new Vue({
     el: "#dynamicText",
     data: {
         list: [],
-        text: ['好好学习,天天向上!'
+        text: ['歌曲好听吗？嘻嘻😁'
         ]
     },
     methods: {
