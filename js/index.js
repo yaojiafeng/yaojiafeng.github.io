@@ -77,26 +77,38 @@ let playBtn = $("#audio-playbtn")[0]
 // let start = $("#start")[0];
 //myVideo.play();
 
-let promise = new Promise(function (resolve, reject) {
-    EventUtil.addHandlder(playBtn,'click', function (e) {
+// let promise = new Promise(function (resolve, reject) {
+//     EventUtil.addHandlder(playBtn,'click', function (e) {
+//         if (myVideo.paused) {
+//             myVideo.play();
+//         } else {
+//             myVideo.pause();
+//         }
+//         // console.log(e.clientY);
+//         // console.log(e.pageY);
+//         // console.log(e);
+//         setTimeout(function () {
+//             resolve();
+//         }, 5000)
+
+//     })
+// })
+// promise.then(function () {
+//     vm.show();
+// })
+EventUtil.addHandlder(playBtn,'click', function (e) {
         if (myVideo.paused) {
             myVideo.play();
         } else {
             myVideo.pause();
         }
-        // console.log(e.clientY);
-        // console.log(e.pageY);
-        // console.log(e);
-        setTimeout(function () {
-            resolve();
-        }, 5000)
-
-    })
-})
-promise.then(function () {
+}
+getPlayTime(){
+     return myVideo.currentTime;
+}
+if(getPlayTime()>=30){
     vm.show();
-})
-
+}
 
 /*
 弹球部分
