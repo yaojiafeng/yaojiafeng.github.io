@@ -102,11 +102,11 @@ EventUtil.addHandlder(playBtn,'click', function (e) {
         } else {
             myVideo.pause();
         }
-}
+})
 getPlayTime(){
      return myVideo.currentTime;
 }
-if(getPlayTime()>=30){
+if(getPlayTime()>=20){
     vm.show();
 }
 
