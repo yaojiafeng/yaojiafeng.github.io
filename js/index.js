@@ -2,7 +2,7 @@ var vm = new Vue({
     el: "#dynamicText",
     data: {
         list: [],
-        text: ['歌曲好听吗？嘻嘻😁'
+        text: ['歌曲好听吗？嘻嘻!'
         ]
     },
     methods: {
@@ -99,7 +99,7 @@ let playBtn = $("#audio-playbtn")[0]
 EventUtil.addHandlder(playBtn,'click', function (e) {
         if (myVideo.paused) {
             myVideo.play();
-            setTimeout(vm.show(),20000)
+            setTimeout(()=>{vm.show()},20000)
         } else {
             myVideo.pause();
         }
@@ -107,7 +107,7 @@ EventUtil.addHandlder(playBtn,'click', function (e) {
 function getPlayTime(){
      return myVideo.currentTime;
 }
-setTimeout(vm.show(),20000)
+setTimeout(()=>{vm.show()},20000)
 /*
 弹球部分
 */
