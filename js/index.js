@@ -257,7 +257,7 @@ EventUtil.addHandlder(startBallBtn, 'click', function () {
     exitBallBtn.style.display = "block";
     getStartGameBox();
     createBall(50);
-    createBlock('放弃了');
+    createBlock('学前端吧');
 })
 EventUtil.addHandlder(ballBox, 'click', function (event) {
     // launchBall(100, event);
