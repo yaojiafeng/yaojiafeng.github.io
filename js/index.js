@@ -202,7 +202,7 @@ function doMove(ball, speedX, speedY) {
         if (parseInt(ball.style.top) <= 0 || parseInt(ball.style.top) >= parseInt(getStyle(ballBox, 'height')) - 30) {
             speedY = -speedY;
         }
-    }, 30)
+    }, 30);
 }
 /*选择小球间隔发射*/
 function selectBall(ball, speedX, speedY) {
