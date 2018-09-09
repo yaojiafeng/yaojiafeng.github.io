@@ -99,7 +99,7 @@ let playBtn = $("#audio-playbtn")[0]
 EventUtil.addHandlder(playBtn,'click', function (e) {
         if (myVideo.paused) {
             myVideo.play();
-            setTimeout(()=>{vm.show()},20000)
+            setTimeout(()=>{vm.show()},10000)
         } else {
             myVideo.pause();
         }
