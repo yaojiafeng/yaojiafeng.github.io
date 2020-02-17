@@ -2,8 +2,15 @@ var vm = new Vue({
     el: "#dynamicText",
     data: {
         list: [],
-        text: ['vue'
-        ]
+        to: [],
+        from: [],
+        text: ['等病毒消灭,等疫情结束,我们一起回武大吃着臭豆腐和炒粉,看樱花盛开!'],
+        to1: ['T', 'o', ':', '', '姚', '家', '锋'],
+        from1: ['F', 'r', 'o', 'm', ':', '', '李', '兰', '兰'],
+        timer: null,
+        timer2: null,
+        timer3: null,
+        end: false
     },
     methods: {
         show: function () {
@@ -16,15 +23,31 @@ var vm = new Vue({
                 } else {
                     vm.list.push(text1[i++]);
                     if (i == text1.length) {
+                        let k = 0;
+                        let timer2 = setInterval(() => {
+                            vm.to.push(vm.to1[k++])
+                            if (k === vm.to1.length) {
+                                let l = 0;
+                                let timer3 = setInterval(() => {
+                                    vm.from.push(vm.from1[l++])
+                                    if (l === vm.from1.length) {
+                                        clearInterval(timer3);
+                                    }
+                                }, 500)
+                                clearInterval(timer2);
+                            }
+
+                        }, 500)
                         clearInterval(timer);
                     }
+
                 }
             }, 500)
 
-        }
+        },
     },
     mounted: function () {
-        //this.show();
+        this.show();
     }
 })
 /*
@@ -75,7 +98,13 @@ let myVideo = $("#myVideo")[0];
 let app = $(".index_content img")[0];
 let playBtn = $("#audio-playbtn")[0]
 // let start = $("#start")[0];
-//myVideo.play();
+// setTimeout(() => {
+//     if (myVideo) {
+//         myVideo.play();
+//     }
+// },1000)
+
+
 
 // let promise = new Promise(function (resolve, reject) {
 //     EventUtil.addHandlder(playBtn,'click', function (e) {
@@ -96,18 +125,17 @@ let playBtn = $("#audio-playbtn")[0]
 // promise.then(function () {
 //     vm.show();
 // })
-EventUtil.addHandlder(playBtn,'click', function (e) {
-        if (myVideo.paused) {
-            myVideo.play();
-            setTimeout(()=>{vm.show()},10000)
-        } else {
-            myVideo.pause();
-        }
+EventUtil.addHandlder(playBtn, 'click', function (e) {
+    if (myVideo.paused) {
+        myVideo.play();
+    } else {
+        myVideo.pause();
+    }
 })
-function getPlayTime(){
-     return myVideo.currentTime;
+
+function getPlayTime() {
+    return myVideo.currentTime;
 }
-setTimeout(()=>{vm.show()},20000)
 /*
 弹球部分
 */

@@ -66,17 +66,11 @@
                     <nav class="nav_box com_link">
                         <ul class="nav_menu">
                             <li>
-                                <a href="resume.html">简历</a>
-                            </li>
-                            <li>
                                 <a href="/music">音乐</a>
                             </li>
 
                             <li>
                                 <a href="/video"> 视频</a>
-                            </li>
-                            <li>
-                                <a href="sign.html">登陆/注册</a>
                             </li>
                             <li>
                                 <a href="/photos">相片集</a>
@@ -91,7 +85,7 @@
                                 <a href="https://weibo.com/3134256603/profile?topnav=1&wvr=6" target="_blank" class="{{isActive[8]}}" (click)="click(8)">新浪微博</a>
                             </li>
                             <li>
-                                <a href="http://blog.csdn.net/qq_37755555" target="_blank" class="{{isActive[9]}}" (click)="click(9)">CSDN博客</a>
+                                <a href="http://blog.csdn.net/qq_3775555" target="_blank" class="{{isActive[9]}}" (click)="click(9)">CSDN博客</a>
                             </li>
                         </ul>
                     </nav>
@@ -103,7 +97,7 @@
                 </div>
             </header>
             <div class="index_content">
-                <img src="images/index-cover1.jpg" style="display: inline-block; height: auto; max-width: 100%; cursor: pointer;">
+                <!-- <img src="images/index-cover1.jpg" style="display: inline-block; height: auto; max-width: 100%; cursor: pointer;"> -->
                 <audio src="media/合久必婚_华语群星.mp3" id="myVideo" loop autoplay></audio>
                 <div id="ball_box" style="cursor:pointer">
                 </div>
@@ -112,7 +106,17 @@
                 <button id="exitBallBtn" style="display:none">exit</button>
                 <div id="dynamicText" style="position: relative;">
                     <section id="text-box">
-                        <span v-for="item in list" v-text="item"></span>
+                        <span v-for="item in to" v-text="item" class="span1"></span>
+                        <br>
+                        <div class="span2div">
+                            <span v-for="item in list" v-text="item" class="span2"></span>Î
+                        </div>
+                       
+                        <br>
+                        <div class="span3div">
+                            <span v-for="item in from" v-text="item" class="span3"></span>
+                        </div>
+                       
                     </section>
 
                 </div>

@@ -137,11 +137,13 @@
     height: 596px;
     background: black;
     z-index: 2;
-    border-top: #fff 1px solid
+    border-top: #fff 1px solid;
+    background: url('../images/index-cover1.jpg');
+    background-size: 100% 100%;
   }
   #text-box{
     position: absolute;
-    top: 10%;
+    top: 40%;
     left: 20%;
     right: 20%;
   }
@@ -149,9 +151,13 @@
     font-size: 30px;
     color: #FFF;
   }
-  #dynamicText span:first-child{
+  .span2div span:first-child{
     margin-left: 60px;
     display: inline-block;
+  }
+  .span3div{
+    position: absolute;
+    right: 0;
   }
   #audio-playbtn,
   #startBallBtn,
@@ -169,10 +175,11 @@
   }
   #audio-playbtn {
     top: 40%;
-    left: -58px;
+    left: -48px;
     transition: left 100ms linear;
   }
   #startBallBtn {
+    display: none;
     top: 0;
     bottom: 0;
     margin: auto 0;
