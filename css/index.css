@@ -150,7 +150,7 @@
   #dynamicText span{
     font-size: 30px;
     color: #FFF;
-    opacity: 0;
+    /* opacity: 0; */
   }
   .span2div span:first-child{
     margin-left: 60px;
