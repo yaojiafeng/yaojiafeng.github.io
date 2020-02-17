@@ -149,8 +149,13 @@
   }
   #dynamicText span{
     font-size: 30px;
+    min-width: 10px;
     color: #FFF;
+    /* display: inline-block; */
     /* opacity: 0; */
+  }
+  .span1div span{
+    display: inline-block;
   }
   .span2div span:first-child{
     margin-left: 60px;
@@ -159,6 +164,9 @@
   .span3div{
     position: absolute;
     right: 0;
+  }
+  .span3div span{
+    display: inline-block;
   }
   #audio-playbtn,
   #startBallBtn,
