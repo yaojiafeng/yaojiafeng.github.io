@@ -38,7 +38,7 @@ var vm = new Vue({
                                             setTimeout(()=>{
                                                 vm.$refs['text-box'].style.opacity="0"
                                             },60000)
-                                        }, 20000)
+                                        }, 60000)
                                     }
                                 }, 50)
                                 clearInterval(timer2);
