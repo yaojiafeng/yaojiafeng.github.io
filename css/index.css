@@ -146,8 +146,8 @@
     top: 40%;
     left: 20%;
     right: 20%;
-    opacity: 0;
-    transition: all 25s;
+    /* opacity: 0; */
+    /* transition: all 25s; */
   }
   #dynamicText span{
     font-size: 30px;
