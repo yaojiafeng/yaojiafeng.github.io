@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        yao
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <meta name="keywords" content="个人网站,前端开发,个人简历,博客,个人音乐,音乐播放,视频播放,个人图片,弹球小游戏,原创作品" />
+    <meta name="description" content="，个人网站,个人简历,前端开发,前端博客,原生javascript构建网站,node.js服务器,express框架,github开源共享" />
+    <meta name="robots" content="all" />
+    <meta name="googlebot" content="all" />
+    <meta name="baiduspider" content="all" />
+    <meta name="copyright" content="本页版权 yaojiafeng.com 姚家锋个人网站所有。All Rights Reserved" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+    <link rel='stylesheet' href='css/style.css' />
+    <link rel='stylesheet' href='css/index.css' />
+    <style>
+        @keyframes bouncing-loader {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0.1;
+    transform: translateY(-1rem);
+  }
+}
+.bouncing-loader {
+  display: flex;
+  justify-content: center;
+}
+.bouncing-loader > div {
+  width: 1rem;
+  height: 1rem;
+  margin: 3rem 0.2rem;
+  background: #8385aa;
+  border-radius: 50%;
+  animation: bouncing-loader 0.6s infinite alternate;
+}
+.bouncing-loader > div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.bouncing-loader > div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+    </style>
+</head>
+
+<body>
+    <div style="position:relative;" id="app">
+        <div style="position:relative" id="container">
+            <header class="header" id="nav_header">
+                <div class="com_wrap">
+                    <div class="ui_logo ">
+                        <a href="/">
+                            <span>Yao</span>
+                        </a>
+                    </div>
+                    <nav class="nav_box com_link">
+                        <ul class="nav_menu">
+                            <li>
+                                <a href="/music">音乐</a>
+                            </li>
+
+                            <li>
+                                <a href="/video"> 视频</a>
+                            </li>
+                            <li>
+                                <a href="/photos">相片集</a>
+                            </li>
+
+                        </ul>
+                        <ul class="nav_social">
+                            <li>
+                                <a href="https://www.github.com/yaojiafeng" target="_blank" class="{{isActive[7]}}" (click)="click(7)">github</a>
+                            </li>
+                            <li>
+                                <a href="https://weibo.com/3134256603/profile?topnav=1&wvr=6" target="_blank" class="{{isActive[8]}}" (click)="click(8)">新浪微博</a>
+                            </li>
+                            <li>
+                                <a href="http://blog.csdn.net/qq_3775555" target="_blank" class="{{isActive[9]}}" (click)="click(9)">CSDN博客</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="nav_icon fr" id="nav_icon">
+                        <span class="icon_menu">
+                            <span></span>
+                        </span>
+                    </a>
+                </div>
+            </header>
+            <div class="index_content">
+                <!-- <img src="images/index-cover1.jpg" style="display: inline-block; height: auto; max-width: 100%; cursor: pointer;"> -->
+                <audio src="media/合久必婚_华语群星.mp3" id="myVideo" loop autoplay></audio>
+                <div id="ball_box" style="cursor:pointer">
+                </div>
+                <button id="audio-playbtn">music</button>
+                <button id="startBallBtn">start</button>
+                <button id="exitBallBtn" style="display:none">exit</button>
+                <div id="dynamicText" style="position: relative;">
+                    <section id="text-box" ref='text-box'>
+                        <div class="span1div"> <span v-for="item in to" v-text="item" class="span1"></span></div>
+                       
+                        <br>
+                        <div class="span2div">
+                            <span v-for="item in list" v-text="item" class="span2"></span>Î
+                        </div>
+                       
+                        <br>
+                        <div class="span3div">
+                            <span v-for="item in from" v-text="item" class="span3"></span>
+                        </div>
+                       
+                    </section>
+
+                </div>
+                <footer>
+                    <div class="ppp">
+                        <p> &copy; 姚家锋</p>
+                        <p>
+                            <a href="http://www.miitbeian.gov.cn/" target="_blank">粤ICP备18048106号-1</a>
+                        </p>
+                        <div class="bouncing-loader">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <div id="sidebar" style="width:150px;background:black;position:fixed;height:auto;top:0;right:-150px">
+            <div style="padding:30px 0;width:100% ;text-align:center">
+                <ul class="sidebar_menu">
+                    <li>
+                        <a href="/music">音乐</a>
+                    </li>
+                    <li>
+                        <a href="/video"> 视频</a>
+                    </li>
+                    <li>
+                        <a href="/photos">相片集</a>
+                    </li>
+                    <li>
+                        <a href="https://www.github.com/yaojiafeng" target="_blank">GITHUB</a>
+                    </li>
+                    <li>
+                        <a href="https://weibo.com/3134256603/profile?topnav=1&wvr=6" target="_blank">新浪微博</a>
+                    </li>
+                    <li>
+                        <a href="http://blog.csdn.net/qq_3775555" target="_blank">CSDN博客</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/vue.js"></script>
+    <script type="text/javascript" src="js/com.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
